@@ -116,7 +116,6 @@ class Actions {
         }
 
         System.out.print("7. feladat: Statisztika");
-        //stat.forEach((key, value) -> System.out.print((value > min) ? "\n\t" + key + " - " + value + " fő" : ""));
         stat.entrySet().stream().sorted(Map.Entry.<String, Integer>comparingByValue().reversed()).forEach((value) -> System.out.print((value.getValue() > min) ? "\n\t" + value.getKey() + " - " + value.getValue() + " fő" : ""));
     }
 }
